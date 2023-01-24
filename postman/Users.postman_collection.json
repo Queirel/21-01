@@ -1,0 +1,156 @@
+{
+	"info": {
+		"_postman_id": "cefd5b9f-1a6e-4f99-adec-0dbf9c7c9cc6",
+		"name": "Users",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24748318"
+	},
+	"item": [
+		{
+			"name": "Get Users",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo1LCJ1c2VyX25hbWUiOiJmZWRlIiwidXNlcl9wYXNzd29yZCI6InBhc3MiLCJ1c2VyX3JvbGUiOiJhZG1pbiIsImlhdCI6MTY3NDI3NjY5NH0.qTfYI_PhvwfKxmUPYSU1zJwPpx2sMAYQL8bzpfS4zfI",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save Users",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo1LCJ1c2VyX25hbWUiOiJmZWRlIiwidXNlcl9wYXNzd29yZCI6InBhc3MiLCJ1c2VyX3JvbGUiOiJhZG1pbiIsImlhdCI6MTY3NDI3NjY5NH0.qTfYI_PhvwfKxmUPYSU1zJwPpx2sMAYQL8bzpfS4zfI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_name\": \"fede\",\r\n    \"user_password\": \"pass\",\r\n    \"user_role\": \"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User by Id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo1LCJ1c2VyX25hbWUiOiJmZWRlIiwidXNlcl9wYXNzd29yZCI6InBhc3MiLCJ1c2VyX3JvbGUiOiJhZG1pbiIsImlhdCI6MTY3NDI3NjY5NH0.qTfYI_PhvwfKxmUPYSU1zJwPpx2sMAYQL8bzpfS4zfI",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/users/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User by Id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo1LCJ1c2VyX25hbWUiOiJmZWRlIiwidXNlcl9wYXNzd29yZCI6InBhc3MiLCJ1c2VyX3JvbGUiOiJhZG1pbiIsImlhdCI6MTY3NDI3NjY5NH0.qTfYI_PhvwfKxmUPYSU1zJwPpx2sMAYQL8bzpfS4zfI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_name\": \"fede1\",\r\n    \"user_role\": \"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/users/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User by Id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo1LCJ1c2VyX25hbWUiOiJmZWRlIiwidXNlcl9wYXNzd29yZCI6InBhc3MiLCJ1c2VyX3JvbGUiOiJhZG1pbiIsImlhdCI6MTY3NDI3NjY5NH0.qTfYI_PhvwfKxmUPYSU1zJwPpx2sMAYQL8bzpfS4zfI",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/users/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

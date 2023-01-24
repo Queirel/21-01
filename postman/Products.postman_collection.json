@@ -1,0 +1,279 @@
+{
+	"info": {
+		"_postman_id": "e2ed83d9-9778-4bc1-86f2-172bceda73fd",
+		"name": "Products",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24748318"
+	},
+	"item": [
+		{
+			"name": "Get Products by User Id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo1LCJ1c2VyX25hbWUiOiJmZWRlIiwidXNlcl9wYXNzd29yZCI6InBhc3MiLCJ1c2VyX3JvbGUiOiJhZG1pbiIsImlhdCI6MTY3NDI3NjY5NH0.qTfYI_PhvwfKxmUPYSU1zJwPpx2sMAYQL8bzpfS4zfI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"prod_stock\": 123,\r\n    \"prod_user_id\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/products/user/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products",
+						"user",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Products",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo1LCJ1c2VyX25hbWUiOiJmZWRlIiwidXNlcl9wYXNzd29yZCI6InBhc3MiLCJ1c2VyX3JvbGUiOiJhZG1pbiIsImlhdCI6MTY3NDI3NjY5NH0.qTfYI_PhvwfKxmUPYSU1zJwPpx2sMAYQL8bzpfS4zfI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"prod_stock\": 123,\r\n    \"prod_user_id\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save Products",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo1LCJ1c2VyX25hbWUiOiJmZWRlIiwidXNlcl9wYXNzd29yZCI6InBhc3MiLCJ1c2VyX3JvbGUiOiJhZG1pbiIsImlhdCI6MTY3NDI3NjY5NH0.qTfYI_PhvwfKxmUPYSU1zJwPpx2sMAYQL8bzpfS4zfI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"prod_stock\": 123,\r\n    \"prod_user_id\": 1,\r\n    \"prod_name\": \"product\",\r\n    \"prod_price\":1234,\r\n    \"prod_category\": \"toys\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Products by Category",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo1LCJ1c2VyX25hbWUiOiJmZWRlIiwidXNlcl9wYXNzd29yZCI6InBhc3MiLCJ1c2VyX3JvbGUiOiJhZG1pbiIsImlhdCI6MTY3NDI3NjY5NH0.qTfYI_PhvwfKxmUPYSU1zJwPpx2sMAYQL8bzpfS4zfI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"prod_stock\": 123,\r\n    \"prod_user_id\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/products/category/toys",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products",
+						"category",
+						"toys"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Products by Id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo1LCJ1c2VyX25hbWUiOiJmZWRlIiwidXNlcl9wYXNzd29yZCI6InBhc3MiLCJ1c2VyX3JvbGUiOiJhZG1pbiIsImlhdCI6MTY3NDI3NjY5NH0.qTfYI_PhvwfKxmUPYSU1zJwPpx2sMAYQL8bzpfS4zfI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"prod_stock\": 123,\r\n    \"prod_user_id\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/products/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Products by Id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo1LCJ1c2VyX25hbWUiOiJmZWRlIiwidXNlcl9wYXNzd29yZCI6InBhc3MiLCJ1c2VyX3JvbGUiOiJhZG1pbiIsImlhdCI6MTY3NDI3NjY5NH0.qTfYI_PhvwfKxmUPYSU1zJwPpx2sMAYQL8bzpfS4zfI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"prod_stock\": 123,\r\n    \"prod_user_id\": 1,\r\n    \"prod_name\": \"product\",\r\n    \"prod_price\":1234,\r\n    \"prod_category\": \"toys\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/products/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Products by Id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjo1LCJ1c2VyX25hbWUiOiJmZWRlIiwidXNlcl9wYXNzd29yZCI6InBhc3MiLCJ1c2VyX3JvbGUiOiJhZG1pbiIsImlhdCI6MTY3NDI3NjY5NH0.qTfYI_PhvwfKxmUPYSU1zJwPpx2sMAYQL8bzpfS4zfI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"prod_stock\": 123,\r\n    \"prod_user_id\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/products/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
