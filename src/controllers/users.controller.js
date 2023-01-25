@@ -3,7 +3,7 @@ const Users = require("../models/users.models")
 
 const getUsers = async (req, res) => {
     try {
-        const getUsers = await Users.findAll({ limit: 1,offset: 0 })
+        const getUsers = await Users.findAll({ limit: 3,offset: 2 })
         res.status(200).json(getUsers)
     }
     catch (error) {
@@ -15,13 +15,12 @@ const saveUser = async (req, res) => {
     try {
         const { user_name, user_password, user_role } = req.body
         const passHash = await passwordHash(user_password)
-        await Users.create({
+        const newUser = await Users.create({
             user_name,
             user_password: passHash,
             user_role
         })
-        const getUsers = await Users.findAll()
-        res.status(200).json(getUsers)
+        res.status(200).json(newUser)
     }
     catch (error) {
         res.status(500).json({ error })
@@ -31,7 +30,7 @@ const saveUser = async (req, res) => {
 const getUser = async (req, res) => {
     try {
         const user_id = req.params.id
-        const user = await Users.findOne({ where: { user_id } })
+        const user = await Users.findOne({  user_id  })
         if (user) {
             res.status(200).json(user)
         }
@@ -47,7 +46,7 @@ const getUser = async (req, res) => {
 const updateUser = async (req, res) => {
     try {
         const user_id = req.params.id
-        const user = await Users.findOne({ where: { user_id } })
+        const user = await Users.findOne({ user_id  })
         if (user) {
             const { user_name, user_role } = req.body
             await Users.update({
@@ -68,7 +67,7 @@ const updateUser = async (req, res) => {
 const deleteUser = async (req, res) => {
     try {
         const user_id = req.params.id
-        const user = await Users.findOne({ where: { user_id } })
+        const user = await Users.findOne({ user_id  })
         if (user) {
             await Users.destroy({ where: { user_id } })
             res.status(200).json(`User ${user_id} deleted`)

@@ -20,6 +20,14 @@ const Transactions = sequelize.define('transactions', {
     trans_prod_quantity: {
         type: DataTypes.INTEGER,
         allowNull: false,
+        validate:{
+            min: {
+                args: 1,
+                msg: "must be more than 0"
+            },
+            max:200,
+        },
+        defaultValue: 1
     },
 }, { timestamps: true })
 

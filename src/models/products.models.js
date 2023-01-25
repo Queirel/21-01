@@ -13,6 +13,13 @@ const Products = sequelize.define('products', {
     prod_name: {
         type: DataTypes.STRING,
         allowNull: false,
+        validate:{
+            isAlpha:{
+                args: true,
+                msg: "must be only letters"
+            }
+        },
+        defaultValue: 1
     },
     prod_user_id: {
         type: DataTypes.INTEGER,
@@ -21,13 +28,23 @@ const Products = sequelize.define('products', {
     },
     prod_price: {
         type: DataTypes.INTEGER,
-        allowNull: false
+        allowNull: false,
+        validate:{
+            min: {
+                args: 1,
+                msg: "must be more than 0"
+            },
+        },
+        defaultValue: 1
     },
     prod_stock: {
         type: DataTypes.INTEGER,
         allowNull: false,
         validate: {
-            len: [0, 200]
+            min: {
+                args: 1,
+                msg: "there has to be at least 1"
+            }
         }
     },
     prod_category: {

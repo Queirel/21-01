@@ -13,11 +13,25 @@ const Users = sequelize.define('users', {
     },
     user_name: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: false,
+        unique: true,
+        validate:{
+            isAlpha: {
+                msg: "User name must only contain letters"
+            },
+            len:{
+                args:[2,255],
+                msg: "User name lenght must be between 2 and 255 characters"
+            }
+        }
     },
     user_password: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: false,
+        len:{
+            args:[2,255],
+            msg: "Password must be between 2 and 255 characters"
+        }
     },
     user_role: {
         type: DataTypes.ENUM('admin', 'user'),
